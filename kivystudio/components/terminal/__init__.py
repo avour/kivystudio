@@ -9,6 +9,8 @@ from kivy.lang import Builder
 from kivystudio.libs.resizablebehavior import ResizableBehavior
 
 from .logger_space import ErrorLogger
+from .command_terminal import CommandTerminal
+
 
 class TerminalSpace(ResizableBehavior, BoxLayout):
 
@@ -24,6 +26,8 @@ class TerminalSpace(ResizableBehavior, BoxLayout):
         super(TerminalSpace, self).__init__(**k)
         self.logger = ErrorLogger()
         self.add_widget(self.logger, title='Logs')
+        self.terminal = CommandTerminal()
+        self.add_widget(self.terminal, title='Terminal')
 
     def add_widget(self, widget, title=''):
         if len(self.children) > 1:

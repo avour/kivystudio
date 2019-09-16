@@ -3,8 +3,9 @@
     sizable_from: 'right'
     max_size: root.parent.width-self.parent.children[2].width if self.parent and len(self.parent.children)>2 else 0
     min_size: '700dp'
-    FloatLayout:
+    BoxLayout:
         id: container
+        orientation: 'vertical'
 
 
 <CodePlace>:
@@ -129,6 +130,7 @@
 
 <FileErrorTab>:
     text: "This file is not displayed because it is either binary or uses an unsupported text encoding."
+    font_size: dp(13)* settings.dpi_scale
     canvas.before:
         Color:
             rgba: (0.12, 0.12, 0.12, 1)

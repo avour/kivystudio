@@ -46,3 +46,12 @@ def get_user_data_dir(name):
     if not exists(data_dir):
         os.mkdir(data_dir)
     return data_dir
+
+
+def threaded(func, *args, **kwargs):
+	'decorator that run fuc in a thread'
+	from threading import Thread
+	def caller(*args, **kwargs):
+		Thread(target=func, args=args,
+				kwargs=kwargs, daemon=True).start()
+	return caller

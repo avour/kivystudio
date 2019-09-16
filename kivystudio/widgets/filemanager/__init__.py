@@ -63,17 +63,7 @@ class FileManager(ModalView):
 
     def get_defualt_user_dir(self):
         default_dir = None
-        if platform == 'linux':
-            username = os.getlogin()
-            if username != 'root':
-                default_dir = r'/home/%s'%username
-            else:
-                default_dir = r'/root'
-
-        elif platform == 'win':
-            base = os.getcwd().split("\\")[:3]
-            default_dir = "\\".join(base)
-
+        default_dir = os.path.expanduser('~')
         return default_dir
 
     def set_side_panel_dir(self, name):
