@@ -63,6 +63,60 @@
             type: 'shortcut'
 
 
+<EditTopMenu>:
+    auto_width: False
+    width: '260dp'
+    MenuButton:
+        on_release: root.do('undo')
+        MenuLabel:
+            text: 'Undo'
+        MenuLabel:
+            text: 'Ctrl+Z'
+            type: 'shortcut'
+    MenuButton:
+        on_release: root.do('redo')
+        MenuLabel:
+            text: 'Redo'
+        MenuLabel:
+            text: 'Ctrl+Y'
+            type: 'shortcut'
+    MenuButton:
+        on_release: root.do('cut')
+        MenuLabel:
+            text: 'Cut'
+        MenuLabel:
+            text: 'Ctrl+X'
+            type: 'shortcut'
+    MenuButton:
+        on_release: root.do('copy')
+        MenuLabel:
+            text: 'Copy'
+        MenuLabel:
+            text: 'Ctrl+C'
+            type: 'shortcut'
+    MenuButton:
+        on_release: root.do('paste')
+        MenuLabel:
+            text: 'Paste'
+        MenuLabel:
+            text: 'Ctrl+V'
+            type: 'shortcut'
+    MenuButton:
+        on_release: root.do('find')
+        MenuLabel:
+            text: 'Find'
+        MenuLabel:
+            text: 'Ctrl+F'
+            type: 'shortcut'
+    MenuButton:
+        on_release: root.do('find_in_file')
+        MenuLabel:
+            text: 'Find in Files'
+        MenuLabel:
+            text: 'Ctrl+Shift+F'
+            type: 'shortcut'
+
+
 <MenuLabel@Label>:
     text_size: self.size
     halign: 'left'

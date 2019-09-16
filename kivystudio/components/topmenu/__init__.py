@@ -77,7 +77,7 @@ Builder.load_string('''
         text: 'Edit'
         on_release:
             root.drop_on_hover=False;
-            root.drop_menu('FileTopMenu', 3)
+            root.drop_menu('EditTopMenu', 3)
 
     TopMenuItem:
         text: 'View'
